@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System - Splash Screen</title>
+    <style>
+        /* Body style */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #2980b9, #6dd5fa, #ffffff);
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Splash screen container */
+        #splash-screen {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+        }
+
+        /* Splash screen content */
+        .splash-content {
+            text-align: center;
+            color: white;
+            animation: fadeOut 2s ease-out 5s forwards;
+        }
+
+        /* Heading text */
+        .splash-content h1 {
+            font-size: 3em;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Loading dots animation */
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+        }
+
+        .loading-dots span {
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 5px;
+            animation: loading 1s infinite;
+        }
+
+        .loading-dots span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .loading-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loading-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        /* Loading animation */
+        @keyframes loading {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Fade-out animation */
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="splash-screen">
+        <div class="splash-content">
+            <h1>Employee Management System</h1>
+            <div class="loading-dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Wait for the splash screen to disappear after a few seconds and then navigate to the main page.
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('splash-screen').style.display = 'none';
+                // You can redirect to your main dashboard here
+                // window.location.href = "dashboard.html";  // Uncomment this line to redirect to the main page.
+            }, 5000); // 5 seconds delay
+        });
+    </script>
+</body>
+</html>

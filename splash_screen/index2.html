@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <style>
+        /* Background Gradient */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff8a00, #e52e71);
+            /* Feel free to adjust the gradient colors! */
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Splash Logo Styles */
+        .splash-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: transparent; /* Hide the text initially */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            /* Add a subtle text shadow for depth */
+            animation: popUp 1s forwards; /* Keep the final state after animation */
+            cursor: pointer; /* Make it clickable */
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes popUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-logo">
+        E<span>M</span><span>P</span><span>L</span><span>O</span><span>Y</span><span>E</span> <span>M</span><span>A</span><span>N</span><span>A</span><span>G</span><span>E</span><span>M</span><span>E</span><span>N</span><span>T</span> <span>S</span><span>Y</span><span>S</span><span>T</span><span>E</span><span>M</span>
+    </div>
+    <script>
+        // Add any JavaScript logic here (if needed)
+        setTimeout(() => {
+            window.location.href = 'login.html'; // Replace with your actual main page
+        }, 3000); // Show splash screen for 3 seconds
+    </script>
+</body>
+</html>
